@@ -1,0 +1,269 @@
+@charset "utf-8";
+html{scroll-behavior: smooth}
+/* CSS Document */
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200;1,300&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+color:#502064}
+font-family: 'Source Sans Pro', sans-serif;
+h{font-size: 50px;
+	font-weight: 700;}
+.tablinks{font-size:20px;
+font-weight: 400;
+color:#502464;
+text-align: center}
+.big{font-size:30px;
+	font-weight: 700;
+color:#205375}
+h1{font-size: 50px;
+color:#502464}
+h2{color:#205375}
+h3{ font-weight: 400;
+color:#112B3C}
+p{color:#112B3C}
+.btn-primary:hover{ background:#B6E3B0}
+footer{ background: #eee}
+.footer-menu a{ display: block; text-decoration: none; color: #666; margin: 15px }
+.footer-menu a:hover{ color: #000}
+.bg-primary{ background:#FFBD35}
+section{ padding:0.5px 0} 
+/*----------------------------begin menu-----------------------------------------*/
+header{ position: fixed; width: 100%; left: 0; top: 0; background:#502464}
+header a.logo
+{
+ text-decoration: none; text-align: center; 
+	display: block; padding: 10px;;
+}
+header nav{ position: relative; background:#8067AD}
+header .navbar-toggle{ 
+position: absolute; right: 10%; top:-35px; border: none; font-size: 1.2rem; cursor: pointer;
+background-color:#FFBD35 ; color: #3FA796}
+header nav ul
+{
+	margin: 0; padding: 0; list-style: none
+}
+header nav ul li{ position: relative; }
+header nav ul li a{ text-align: center; display: block; padding: 10px 0;
+color: #502464; text-decoration: none}
+header nav ul li a:hover{ background:#502064; color:#8267BE}
+header nav .menu{ display: none}
+@media (min-width:1000px)
+{
+	header nav ul{ display: flex; justify-content: center}
+	header nav ul li{ border: none}
+	header nav ul li a{ padding: 10px 25px}
+	header .navbar-toggle{ display: none; }
+	header nav .menu{ display: block}
+}
+#about{background:#FEBC35}
+#banner{background:#3FA796;}
+#skill{ background: #3FA796}
+#timeline{ background-color: #8267BE}
+#gallery{background:#FFBD35}
+#contact{background:#8067AD}
+#footer{background:#3FA796;color:#FEBC35
+ }
+#email{background:#3FA796}
+#fname{background:#3FA796}
+#submit{background:#3FA796;}
+#activity{background:#FFBD35;
+        align-items: center;
+        justify-content: center}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #8067AD;
+ justify-content: center;
+	display: flex;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: #8067AD;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #3FA796;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #3FA796;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+.box-me{
+	position: relative; width: 100%; height: 50px; transition: all 1s; transform-style: preserve-3d
+}
+.mtruoc,.msau{
+	width: 100%; height: 50px; position: absolute; left: 0; top:0
+}
+.msau{
+	background: ; color: #fff; text-align: center; padding: 0px;
+	transform: rotateY(-180deg); backface-visibility: hidden
+}
+.box-me:hover{
+	transform: rotateY(180deg)
+}
+.logo img{
+	width: 450px 
+}
+
+/* https://lokeshdhakar.com/projects/lightbox2/ 
+https://www.w3schools.com/w3css/w3css_progressbar.asp
+https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_progressbar_labels
+*/
+ul {
+  display: flex;
+}
+
+li {
+  margin: 0 20px;
+  list-style: none;
+}
+
+.link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.2;
+  overflow: hidden;
+}
+
+.char {
+  display: inline-block;
+  position: relative;
+  color: transparent;
+}
+
+.char::before,
+.char::after {
+  content: attr(data-char);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FEBC35;
+  transition: all 0.7s cubic-bezier(0.858, 0.01, 0.068, 0.99);
+  transition-delay: calc(0.03s * var(--char-index));
+}
+
+.char::after {
+  transform: translateY(-100%);
+}
+
+.link:hover .char::before {
+  transform: translateY(100%);
+}
+
+.link:hover .char::after {
+  transform: translateY(0);
+}
+.flip-card {
+  margin: 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.flip-card-front,
+.flip-card-back {
+  width: 300px;
+  min-height: 400px;
+  height: auto;
+  background-color: #A2F2E3;
+	background-image:url("../img/6CDB854C-41F1-48CA-B859-9748FA9726B6.JPG");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.flip-card:nth-of-type(2) .flip-card-front,
+.flip-card:nth-of-type(2) .flip-card-back {
+}
+
+.flip-card:nth-of-type(3) .flip-card-front,
+.flip-card:nth-of-type(3) .flip-card-back {
+}
+
+.flip-card-front {
+  transform: rotateY(0deg);
+}
+
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+
+.flip-card-front::after,
+.flip-card-back::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
+
+.flip-card-front .inner,
+.flip-card-back .inner {
+  width: 100%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  z-index: 2;
+}
+
+.inner .icon {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.inner h3 {
+  margin-bottom: 8px;
+  color: #8067AD;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  text-transform: capitalize;
+}
+
+.inner p {
+  color: #8067AD;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.flip-card:hover .flip-card-front {
+  transform: rotateY(-180deg);
+}
+
+.flip-card:hover .flip-card-back {
+  transform: rotateY(0deg);
+}
+
+
+
+
+
